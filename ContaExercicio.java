@@ -7,7 +7,7 @@ public class ContaExercicio {
     private double saldo;
     private Data data;
 
-    public void ex (int d, int m, int a) {
+    public void exdataAbertura (int d, int m, int a) {
 
         this.data = new Data();
 

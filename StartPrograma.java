@@ -1,9 +1,9 @@
 class StartPrograma {
     public static void main(String[] args) {
-        Produto p = new Produto ();
+        Produto p1 = new Produto("Arroz");
+        Produto p2 = new Produto("Feijão");
+        Produto p3 = new Produto("Macarrão");
 
-        System.out.println("Nome: " + p.nome + "\nPreço: R$" + p.preco);
-
-
+        Produto.getTotalProdutos();
     }
 }

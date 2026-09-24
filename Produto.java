@@ -1,21 +1,16 @@
 public class Produto {
-    String nome;
-    double preco;
+    private String nome;
+    private double preco;
+    private static int totalProdutos;
 
-    // Criando dois construtores. Um recebe parâmetros,
-    // que serão utilizados para preencher os atributos da classe.
-    // Caso o usuário não passe nenhum argumento, será chamado
-    // o construtor vazio. Esse construtor utiliza this(...)
-    // para chamar o outro construtor, passando valores pré-definidos.
-    // O outro construtor então utiliza esses valores para preencher
-    // os atributos da classe.
-
-    public Produto (String nome, double preco) {
+    public Produto (String nome) {
         this.nome = nome;
-        this.preco = preco;
+        totalProdutos = totalProdutos + 1;
     }
-    public Produto () {
-        this("Sem nome", 0);
+
+    public static void getTotalProdutos () {
+        System.out.println("Total de podutos: " + totalProdutos);
+        
     }
-    
 }
+

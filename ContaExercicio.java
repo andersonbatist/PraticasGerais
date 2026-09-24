@@ -76,7 +76,7 @@ public class ContaExercicio {
         System.out.println("Deposito de R$" + valor + " realizado com sucesso!");
     }
 
-    public void calcularRendimento () {
+    public void getRendimento () {
         double valor = this.saldo * 0.1;
         System.out.println("O rendimento mensal foi de R$" + valor);
     }

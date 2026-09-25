@@ -1,9 +1,19 @@
-class StartPrograma {
-    public static void main(String[] args) {
-        Produto p1 = new Produto("Arroz");
-        Produto p2 = new Produto("Feijão");
-        Produto p3 = new Produto("Macarrão");
+public class StartPrograma {
 
-        Produto.getTotalProdutos();
+    public static void main(String[] args) {
+
+        ManipuladorDeContas manipulador = new ManipuladorDeContas ();
+        ManipuladorDeContas manipulador2 = new ManipuladorDeContas ();
+        
+        manipulador.criaConta();
+        manipulador2.criaConta();
+
+        manipulador.deposita(new Evento(1000));
+        manipulador2.deposita(new Evento(500));
+    
+        manipulador.saca(new Evento(200));
+
+        manipulador.contaGuardada.mostraSaldo();
+        manipulador2.contaGuardada.mostraSaldo();
     }
 }
